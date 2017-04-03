@@ -158,6 +158,8 @@ for s=1:Sources
     [Xtrain_collection{s}, Xmean{s}, Xstd{s}] = standardize_data(X_collection{s});
     else
         Xtrain_collection{s} = X_collection{s};
+        Xmean = nan;
+        Xstd = nan;
     end
     Xtrain = [Xtrain Xtrain_collection{s}];
 end
